@@ -2,3 +2,7 @@
   font-family: Ibmp;
   src: url(IBMPlexMono-Regular.ttf);
 }
+@font-face {
+  font-family: Colvetica;
+  src: url(coolvetica-rg.otf);
+}

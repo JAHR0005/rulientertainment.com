@@ -1,11 +1,17 @@
 <template>
     <div id="app">
       <router-view></router-view>
+      <footerComponent></footerComponent>
     </div>
 </template>
 <script>
+import FooterComponent from './components/FooterComponent.vue'
+
 export default {
   name: 'App',
+  components: {
+    FooterComponent
+  },
 }
 </script>
 <style>
@@ -14,7 +20,7 @@ html, body, #app {
   margin: 0;
   display: flex;
   flex-direction: column;
-  font-family: Ibmp!important
+  font-family: Colvetica!important
 }
 
 a {
@@ -22,7 +28,7 @@ a {
 }
 
 a:hover {
-  color: #1352d1!important
+  color:#fb0606 !important
 }
 
 .event-card {

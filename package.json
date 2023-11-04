@@ -9,13 +9,14 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
-    "bootstrap": "^5.2.3",
+    "bootstrap": "^5.3.2",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
     "materialize-css": "^1.0.0",
     "vue": "^2.7.14",
     "vue-router": "^3.4.1",
-    "vue-scroll": "^2.1.13"
+    "vue-scroll": "^2.1.13",
+    "vue-videobg": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

@@ -1,29 +1,44 @@
 <template>
-  <div class="hello">
+  <div>
+    <div class="menu">
+      <ul >
+        <li>
+          <router-link :to="{ name:'YoutubersText' }">Creadores de Contenido</router-link>
+        </li>
+        <li>
+          <router-link :to="{ name:'AdvertisingText' }">Publicidad</router-link>
+        </li>
+        <li>
+          <img  class="title" src="https://ctworker.com/images/logos/ruli_name.png">
+        </li>
+        <li>
+          <router-link :to="{ name:'New' }">Noticias</router-link>
+        </li>
+        <li>
+          <router-link :to="{ name:'CorporativeEvents' }">Eventos</router-link>
+        </li>
+        <li>
+          <router-link :to="{ name:'ContactForm' }">Contacto</router-link>
+        </li>
+      </ul>
+    </div>
 
-      <img class="mt-5 logo" src="images/ruli_logo_white.png">
-    <h3 class="sub-title">
-      Producción Audiovisual
-    </h3>
-    <ul>
-      <li>
-        <router-link :to="{ name:'AdvertisingText' }">Publicidad</router-link>
-      </li>
-      <li>
-        <router-link :to="{ name:'YoutubersText' }">Creadores de Contenido</router-link>
-      </li>
-      <li>
-        <router-link :to="{ name:'CorporativeEvents' }">Eventos</router-link>
-      </li>
-      <li>
-        <router-link :to="{ name:'ContactForm' }">Contacto</router-link>
-      </li>
-    </ul>
+      <iframe
+        class="bg-video"
+        src="https://www.youtube.com/embed/HBiyoh7jIuM?autoplay=1&mute=1&controls=0&loop=1&playlist=HBiyoh7jIuM"
+        frameborder="0"
+        allowfullscreen
+        allow="autoplay"
+      />
+
   </div>
 </template>
+
 <script>
+
 export default {
   name: 'HelloWorld',
+
   created() {
     document.title = 'Ruli Entertainment';
   }
@@ -32,84 +47,51 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .hello {
-    margin:0;
-    background-image: url("https://ctworker.com/images/camera.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: Ibmp, Helvetica, Arial, sans-serif;
-    height:100%;
+  .menu {
+    position: relative;
+    z-index: 1;
+    margin-top: 5%;
     text-align: center;
-    color: white;
-    width: 100%;
   }
 
-  .sub-title {
-    font-size: 3rem;
-    margin-top: 5%;
-  }
-  .title {
-    margin-top: 15%;
-    font-size: 8rem;
-    margin-bottom: 2%
-  }
   li {
     display:inline;
     padding-left:20px;
     padding-right:20px;
   }
+  .title{
+    margin-bottom: 1%;
+  }
+
   a {
     decoration: none;
     font-size: 1.5rem
   }
 
+  .bg-video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background: no-repeat center;
+    user-select: none;
+    pointer-events: none;
+    /*custom styles, for example grayscale appearance*/
+    filter: grayscale(0.8);
+    /*additional tweaks for positioning, read more in the link above*/
+    height: 100%;
+    width: 100%; /* 100 * 16 / 9 */
+    -moz-transform: scale(1.6);
+    -webkit-transform:scale(1.6);
+    -o-transform:scale(1.6);
+    -ms-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+
   @media (min-width: 575px) and (max-width: 768px) {
-    .sub-title {
-      font-size: 2rem;
-    }
-    .title {
-      margin-top: 40%;
-      font-size: 5rem;
-    }
 
-    li {
-      display:inline;
-      padding-left:10px;
-      padding-right:10px;
-    }
-
-    a {
-      margin-top: 10%;
-      color:white;
-      decoration: none;
-      font-size: 1rem
-    }
   }
   @media (min-width: 0px) and (max-width: 575px) {
-    .sub-title {
-      font-size: 1.2rem;
-    }
-    .title {
-      margin-top: 55%;
-      font-size: 2.5rem;
-    }
-    li {
-      display:inline;
-      padding-left:5px;
-      padding-right:5px;
-    }
-    a {
-      margin-top: 10%;
-      color:white;
-      decoration: none;
-      font-size: 1rem
-    }
-    .logo {
-      width: 300px;
-      height:300px;
-      margin-top: 150px!important;
-      margin-bottom: 100px
-    }
+
   }
 </style>
