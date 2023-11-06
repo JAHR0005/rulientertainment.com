@@ -1,7 +1,7 @@
 <template>
     <div id="app">
       <router-view></router-view>
-      <footerComponent></footerComponent>
+      <footerComponent v-if="$route.name == 'Welcome'"></footerComponent>
     </div>
 </template>
 <script>

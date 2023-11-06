@@ -6,10 +6,12 @@
                     <ul>
                         <li><a href='#'>Terminos</a></li>
                         <li><a href='#'>Privacidad</a></li>
-                        <li><a href='#'>Contacto</a></li>
+                        <li>
+                          <router-link :to="{ name:'ContactForm' }">Contacto</router-link>
+                        </li>
                     </ul>
                 </div>
-                <p class="text-center mt-3">&copy; Ruli Entertainment 2023</p>
+                <p class="text-center mt-3">&copy; Ruli Entertainment {{ new Date().getFullYear() }}</p>
             </div>
         </div>
     </footer>

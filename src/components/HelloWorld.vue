@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="menu">
+      <img  class="title-xs mx-auto" src="https://ctworker.com/images/logos/ruli_name.png">
       <ul >
         <li>
           <router-link :to="{ name:'YoutubersText' }">Creadores de Contenido</router-link>
@@ -22,7 +23,6 @@
         </li>
       </ul>
     </div>
-
       <iframe
         class="bg-video"
         src="https://www.youtube.com/embed/HBiyoh7jIuM?autoplay=1&mute=1&controls=0&loop=1&playlist=HBiyoh7jIuM"
@@ -30,10 +30,8 @@
         allowfullscreen
         allow="autoplay"
       />
-
   </div>
 </template>
-
 <script>
 
 export default {
@@ -47,6 +45,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .title-xs {
+    visibility: hidden;
+  }
   .menu {
     position: relative;
     z-index: 1;
@@ -88,10 +89,38 @@ export default {
     transform: scale(1.6);
   }
 
-  @media (min-width: 575px) and (max-width: 768px) {
-
+  @media (max-width: 1100px) {
+    .bg-video {
+      -moz-transform: scale(3);
+      -webkit-transform:scale(3);
+      -o-transform:scale(3);
+      -ms-transform: scale(3);
+      transform: scale(3);
+    }
   }
-  @media (min-width: 0px) and (max-width: 575px) {
 
+  @media (max-width: 575px) {
+    .title-xs {
+      visibility: visible;
+      position: relative;
+      z-index: 1;
+      margin-top: 5%;
+      text-align: center;
+      width: 300px;
+      height: auto;
+    }
+    a {
+      font-size: 1rem!important;
+    }
+    .title {
+      visibility: hidden;
+    }
+    .bg-video {
+      -moz-transform: scale(4);
+      -webkit-transform:scale(4);
+      -o-transform:scale(4);
+      -ms-transform: scale(4);
+      transform: scale(4);
+    }
   }
 </style>
