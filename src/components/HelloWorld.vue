@@ -46,7 +46,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .title-xs {
-    visibility: hidden;
+    display: none;
   }
   .menu {
     position: relative;
@@ -113,7 +113,7 @@ export default {
       font-size: 1rem!important;
     }
     .title {
-      visibility: hidden;
+      display: none;
     }
     .bg-video {
       -moz-transform: scale(4);
